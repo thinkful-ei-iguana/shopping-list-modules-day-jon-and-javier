@@ -13,6 +13,9 @@ const main = function () {
   shoppingList.render();
 };
 
+
+
+
 $(main);
 
 // const itemNames = [ '', 'apples', 'pears' ];
@@ -25,6 +28,7 @@ $(main);
 //       console.log(`Cannot add item: ${error.message}`);
 //     }
 //   });
+
 
 store.addItem('bananas');
 store.addItem('apples');
