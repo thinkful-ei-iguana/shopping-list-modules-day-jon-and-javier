@@ -1,10 +1,6 @@
 function validateName(name){
-    try{
-      if (name === undefined){
-      throw new TypeError ('Name must not be blank');
-    } catch(e){
-      console.log(e.message);
-    }
+  if (!name){
+    throw TypeError ('Name must not be blank');
   }
 }
 
