@@ -1,11 +1,18 @@
 
 import item from './item.js';
 
-const foo = 'bar';
 
+
+let items = [];
+let hideCheckedItems = false;
+
+
+//
 const findById = function(id){
-  items.find(id => id.id === id);
+  items.find(id => items.id === id);
 }; 
+
+
 
 const addItem = function(name){
   try{
@@ -15,14 +22,17 @@ const addItem = function(name){
   } catch(e){
     console.log(e.message);
   }
-  items.push(this.items);
-  console.log(this.name);
+  items.push(item.create(name));
 };
+
+
 
 const findAndToggleChecked = function(id){
   let foundId = this.findById(id);
   foundId.checked = !foundId.checked;
 };
+
+
 
 const findUpdateName = function(id,newName){
   try{
@@ -35,15 +45,16 @@ const findUpdateName = function(id,newName){
   }
 };
 
+
+
 const findAndDelete = function(id){
-  const index = items.findById(id);
+  const index = findById(id);
   items.splice(index,1);
 };
 
 
 
-let items = [];
-let hideCheckedItems = false;
+
 
 export default {
   findById,
