@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
-
-
 import store from './store.js';
 import item from './item.js';
 
@@ -108,9 +106,7 @@ const handleDeleteItemClicked = function () {
 /**
  * Toggles the store.hideCheckedItems property
  */
-const toggleCheckedItemsFilter = function () {
-  store.hideCheckedItems = !store.hideCheckedItems;
-};
+
 
 /**
  * Places an event listener on the checkbox
@@ -118,7 +114,7 @@ const toggleCheckedItemsFilter = function () {
  */
 const handleToggleFilterClick = function () {
   $('.js-filter-checked').click(() => {
-    toggleCheckedItemsFilter();
+    toggleCheckedFilter();
     render();
   });
 };
