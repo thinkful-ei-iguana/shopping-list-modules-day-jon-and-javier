@@ -8,7 +8,7 @@ let items = [];
 let hideCheckedItems = false;
 
 export default {
-  items,
-  hideCheckedItems
+  items: items,
+  hideCheckedItems: hideCheckedItems,
 };
 
