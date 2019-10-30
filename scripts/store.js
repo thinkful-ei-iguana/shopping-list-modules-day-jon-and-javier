@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 
 import item from './item.js';
 
@@ -28,8 +29,8 @@ const addItem = function(name){
 
 
 const findAndToggleChecked = function(id){
-  let foundId = this.findById(id);
-  foundId.checked = !foundId.checked;
+  const item = items.find(item => item.id === id);
+  item.checked = !item.checked;
 };
 
 
@@ -52,7 +53,9 @@ const findAndDelete = function(id){
   items.splice(index,1);
 };
 
-
+const toggleCheckedFilter(){
+  this.hideCheckedItems
+}
 
 
 
