@@ -106,7 +106,9 @@ const handleDeleteItemClicked = function () {
 /**
  * Toggles the store.hideCheckedItems property
  */
-
+const toggleCheckedFilter = function () {
+  store.hideCheckedItems = !store.hideCheckedItems;
+};
 
 /**
  * Places an event listener on the checkbox
@@ -118,6 +120,16 @@ const handleToggleFilterClick = function () {
     render();
   });
 };
+
+
+
+
+
+
+
+
+
+
 
 const handleEditShoppingItemSubmit = function () {
   $('.js-shopping-list').on('submit', '.js-edit-item', event => {
