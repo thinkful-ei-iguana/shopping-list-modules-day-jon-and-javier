@@ -58,26 +58,6 @@ const toggleCheckedFilter = function () {
   items.hideCheckedItems = !items.hideCheckedItems;
 };
 
-/**
- * Places an event listener on the checkbox 
- * for hiding completed items.
- */
-const handleToggleFilterClick = function () {
-  $('.js-filter-checked').click(() => {
-    toggleCheckedFilter();
-    render();
-  });
-};
-
-
-
-
-/*
-const toggleCheckedFilter = function () {
-  store.hideCheckedItems = !store.hideCheckedItems;
-};
-*/
-
 
 export default {
   findById,
